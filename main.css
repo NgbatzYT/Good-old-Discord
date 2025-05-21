@@ -1,7 +1,7 @@
 /**
- * @name Old Discord
+ * @name Good ol' Discord
  * @version 1.0.0
- * @description Makes discord look like pre-2025.
+ * @description Makes discord look like it was pre-2025. W.I.P.
  * @author Ngbatz
  */
 
@@ -20,7 +20,7 @@
 }
 
 nav[class*="guilds_"] {
-
+    background-color: #212326 !important;
     defs>path {
         d: path("M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z");
     }
@@ -193,196 +193,24 @@ nav[class*="guilds_"] {
     bottom: 0px;
     border-radius: 0px;
     border: none;
+    background-color: #282a2e !important;
 }
 
 .visual-refresh nav[class*=guilds_] {
   margin-bottom: unset;
 }
 
-
-#vc-spotify-player {
-    --blur-amount: 4px; 
-    --normal-bg-colour: var(--bg-overlay-floating, var(--background-base-low, var(--background-secondary-alt)));
-
-    position: relative;
-    background: linear-gradient(to bottom, transparent 0%, var(--normal-bg-colour) 100%) !important;
-    overflow: hidden;
-    transition: all 0.4s ease-out;
-    > * {
-      filter: drop-shadow(0 0 10px var(--normal-bg-colour));
-    }
-}
-#vc-spotify-player:hover {
-    --blur-amount: 0px;
-}
-#vc-spotify-player::before,
-#vc-spotify-player::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transition: all 0.4s ease-out;
-}
-#vc-spotify-player::before {
-    background: var(--vc-spotify-track-image);
-    background-position: center top; 
-    background-size: cover; 
-    opacity: 0.5;
-}
-#vc-spotify-player:hover::before {
-    opacity: 0.7;
-}
-#vc-spotify-player::after {
-    backdrop-filter: blur(var(--blur-amount));
-}
-#vc-spotify-progress-bar > [class^="slider_"] > [class^="bar_"] > [class^="barFill_"] {
-    background-color: white !important;
-    background: var(--vc-spotify-track-image);
-    background-size: 1px 100%;
-}
-#vc-spotify-progress-bar > [class^="slider_"] > [class^="bar_"] > [class^="barFill_"]::before {
-    content: "";
-    position: fixed;
-    height: inherit;
-    width: inherit;
-    top: inherit;
-    left: inherit;
-    border-radius: 4px 0 0 4px;
-    backdrop-filter: blur(10px) saturate(4) brightness(1.6);
-}
-
-.avatarPopover__2d0a, .statusPopover__2d0ab, .activityPopover__2d0ab{display:none;}
-body {
-    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-}
-
-[style^="background: linear-gradient(90deg"]:has([src*="/nameplates/"]) { display: none; }
-[class*="dm_"]:has([class*="linkPlated_"]) {
-    & [class*="linkPlated_"] { padding-right: var(--space-16); }
-    & [class*="closeButtonPlated_"] {
-        opacity: 0.7;
-        &:hover { opacity: 1; }
-        & [class^="innerCloseButtonPlated"] {
-            opacity: unset; 
-            background: none;
-            & svg {
-                color: inherit;
-                &:is(:hover, :focus-within) { color: var(--interactive-hover); }
-            }
-        }
-    }
-}
-
-.visual-refresh .scrollerInner__36d07 {
-    padding-bottom: 5px;
-}
-
-.visual-refresh .membersWrap_c8ffbb .membersGroup_c8ffbb {
-    padding-bottom: 25px;
-}
-
-.visual-refresh .button__74017,.buttonContents_e6e74f:not([class*="enabled__67645"]) {
-    transform: scale(1.25) !important;
-}
-
-.visual-refresh .spriteContainer__04eed {
-   transform: scale(1.1) !important;
-}
-
-.layerContainer_da8173:has(.carouselModal_d3a6f0) .tooltip__382e7 {
-    display: none;
-}
-
-.carouselModal_d3a6f0 {
-    justify-content: center;
-    display: flex;
-    gap: 8px;
-    width: fit-content;
-    margin: auto;
-
-    .topBar__6088c {
-        place-self: start;
-        order: 1;
-
-        .actionButtons_cc1819 {
-            padding: 0px !important;
-            margin: 0px !important;
-            background-color: transparent;
-            border: none;
-        }
-
-        .authorAvatar__6088c,
-        .author__6088c,
-        .closeButton__6088c,
-        .actionButton_cc1819:has(path[d="M15.62 17.03a9 9 0 1 1 1.41-1.41l4.68 4.67a1 1 0 0 1-1.42 1.42l-4.67-4.68ZM17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"]),
-        .actionButton_cc1819:has(path[d="M21.7 7.3a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4L18.58 9H13a7 7 0 0 0-7 7v4a1 1 0 1 1-2 0v-4a9 9 0 0 1 9-9h5.59l-3.3-3.3a1 1 0 0 1 1.42-1.4l5 5Z"]),
-        .actionButton_cc1819:has(path[d="M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm8 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"]) {
-            display: none !important;
-        }
-
-        .actionButton_cc1819:has(path[d="M15 2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V4.41l-4.3 4.3a1 1 0 1 1-1.4-1.42L19.58 3H16a1 1 0 0 1-1-1Z"]) {
-            width: auto;
-            height: 0;
-
-            &::after {
-                content: "Open in browser";
-                width: max-content;
-                display: flex;
-                height: auto;
-                pointer-events: all;
-
-                :hover {
-                    color: white;
-                }
-            }
-
-            &::after:hover {
-                color: white;
-            }
-
-            .actionButtonInner_cc1819 {
-                display: none;
-
-            }
-        }
-    }
-
-    .navPrev_b2eddf {
-        position: fixed;
-        left: -64px;
-        background-color: transparent;
-
-        .buttonInner_aec7ab {
-            border: none !important;
-        }
-    }
-
-    .navNext_b2eddf {
-        position: fixed;
-        right: -64px;
-        background-color: transparent;
-
-        .buttonInner_aec7ab {
-            border: none !important;
-        }
-    }
-    .galleryContainer_d75751 {
-        display: none;
-    }
-}
-
-
 @container style(--\\--compact-input-box: true) {
 	:is(form, form > div) {
 		& > div[class*="channelBottomBarArea"] {
-			--custom-channel-textarea-text-area-height: 44px;
+			--custom-channel-textarea-text-area-height: 42px;
+
+            transform: translateY(10px);
 		}
 
 		& > [class*="wrapper__"] {
-			padding: 10px;
+			padding: 0px;
+            
 			& > div {
 				margin-left: 0;
 				margin-right: 0;
@@ -390,8 +218,6 @@ body {
 		}
 	}
 }
-
-
 
 :root {
     --\\--compact-input-box: true;
@@ -402,13 +228,15 @@ body {
 }
 
 [class^=bar] {
+    background-color: #212326 !important;
+
 	[class^="title"] [class^="icon"] {
 		display: none !important;
 	}
 	[class^="title"]::before {
 		content: "" !important;
 		position: absolute !important;
-		left: 4px !important;
+		left: -70px !important;
 		width: 55px !important;
 		height: 10px !important;
 		z-index: 9999 !important;
@@ -420,11 +248,8 @@ body {
 	[class^="title"] {
 		position: relative !important;
 		overflow: visible !important;
-		/* allow ::before to stick out */
 		padding-left: 0 !important;
-		/* no extra gap needed */
 		color: transparent !important;
-		/* kill any text */
 		font-size: 0 !important;
 		line-height: 0 !important;
 	}
@@ -450,9 +275,4 @@ body {
 			display: none;
 		}
 	}
-}
-
-/*restore twitter logo*/
-[src="/assets/a61999ae9bfb9658.svg"] {
-	content: url(https://discord.com/assets/0815e2c86f2e0e37.svg) !important;
 }
