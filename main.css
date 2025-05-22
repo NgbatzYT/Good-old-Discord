@@ -323,6 +323,6 @@ button[aria-label="Start An Activity"] {
     display: none;
 }
 
-*:not(.avatar_c19a55):not(.icon__6e9f8):not(.numberBadge__2b1f5):not(.iconBadge__650eb):not(.icon__0a95c):not(.container__87bf1):not(.unreadMentionsBar_ef3116) {
+*:not(.avatar_c19a55):not(.icon__6e9f8):not(.numberBadge__2b1f5):not(.iconBadge__650eb):not(.icon__0a95c):not(.container__87bf1):not(.unreadMentionsBar_ef3116):not(.closeButton_c2b141) {
   border-radius: 5px !important;
 }
